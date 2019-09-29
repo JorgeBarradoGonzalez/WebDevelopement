@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    /*border: 1px solid black;*/
+
+}
+
+$colorActividad: #67B6B4;
+$colorBio: #FCD02E;
+
+@mixin fuenteJosefin {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+
+.josefin {
+    @include fuenteJosefin;
+}
+
+nav {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+
+    ul {
+        margin: 0% 5%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        background-color: coral;
+
+        #index {
+            margin-left: 2%;
+        }
+
+        li {
+            flex-basis: 20%;
+            text-align: center;
+            text-transform: uppercase;
+
+            img {
+                margin-left: 10px;
+            }
+
+            ul {
+                display: flex;
+                flex-flow: column nowrap;
+                margin-top: 5%;
+                display: none;
+
+                    li {
+                        margin: 5% 0%;
+                        width: 100%;
+                        border: 0.2px solid black;
+                        text-align: center;
+                    }
+                } 
+
+        }
+    }
+}
+
+
+
+ul a:hover {
+    color: white;
+}
+
+#menuP:hover #menuH {
+    display: block;
+}
+
+/*--------------BIOGRAFIA-------------*/
+
+main {
+
+    background-color: lightpink;
+    display: flex;
+    margin: 2% 8%;
+
+    #cajaPresentacion {
+
+        flex-basis: 60%;
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: $colorBio;
+        justify-content: center;
+        margin: 5% 0%;
+        border-radius: 10px;
+        border: 1px solid lightpink;
+
+        picture {
+            align-self: center;
+            margin: 2% 0%;
+        }
+
+        #texto {
+            margin: 0% 10% 5% 10%;
+        }
+    }
+
+    #actividadReciente {
+        background-color: $colorActividad;
+        align-self: center;
+        align-self: flex-start;
+        display: flex;
+        flex-flow: column nowrap;
+        border-radius: 10px;
+        border: 1px solid lightpink;
+
+        h2 {
+            margin: 5% 5% 0% 5%;
+        }
+
+        div {
+            margin: 5% 5%;
+
+            .carta {
+                border: 0.5px solid black;
+            }
+
+            .actividad {
+                margin: 5%;
+            }
+
+            h3 {
+                width: 100%;
+                text-align: center;
+                border: 1px solid black;
+            }
+
+            p {
+                margin: 10% 2.5% 0% 2.5%;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    nav ul {
+
+        li {
+            margin: 2% 0%;
+        }
+    }
+
+    /*--------------BIOGRAFIA-------------*/
+
+    main {
+        flex-flow: column wrap;
+
+        #cajaPresentacion {
+            margin-left: 0%;
+        }
+
+        #actividadReciente {
+            flex-basis: 40%;
+            margin-top: 4.5%;
+            margin-bottom: 5%;
+
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    nav ul {
+
+        li {
+            margin: 1% 0%; //ESTO CAMBIA POR 1%
+
+        }
+    }
+
+
+    /*--------------BIOGRAFIA-------------*/
+
+    main {
+
+        #cajaPresentacion {
+            margin-top: 5.5%;
+            margin-left: 7%;
+            height: 1%; //ESTA LINEA NO ESTA EN EL OTRO TAMANIO. Si la quito, se queda demasiado grande
+        }
+
+        #actividadReciente {
+            flex-basis: 20%; //ANTES ERA 40
+            margin: 2% 7%;
+
+        }
+    }
+}

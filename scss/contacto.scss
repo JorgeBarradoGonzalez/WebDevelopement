@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    /*border: 1px solid black;*/
+
+}
+
+@mixin fuenteJosefin{
+    font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700; 
+}
+
+.josefin {
+  @include fuenteJosefin;}
+
+nav {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+
+    ul {
+        margin: 0% 5%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        background-color: coral;
+
+        #index {
+            margin-left: 2%;
+        }
+
+        li {
+            flex-basis: 20%;
+            text-align: center;
+            margin-top: 1%;
+            text-transform: uppercase;
+
+            img {
+                margin-left: 10px;
+            }
+
+            ul {
+                display: flex;
+                flex-flow: column nowrap;
+                margin-top: 5%;
+                display: none;
+
+                    
+
+                    li {
+                        margin: 5% 0%;
+                        width: 100%;
+                        border: 0.2px solid black;
+                        text-align: center;
+                    }
+            }
+
+        }
+    }
+}
+
+ul a:hover {
+    color: white;
+}
+
+#menuP:hover #menuH {
+    display: block;
+}
+
+/*------*/
+
+.intro {
+    background-color: #f2f2f2;
+    border: 2px solid green;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+#formulario {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0% 20%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 2%;
+    border: 1px solid green;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+
+}
+
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+#horarios {
+    border: 1px solid green;
+
+    table {
+        margin: 3% 15%;
+        border-collapse: collapse;
+        width: 70%;
+        th {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid black;
+            padding: 3%;
+        }
+        td{
+            border: 1px solid black;
+        padding: 3%;
+        }
+    }
+    
+    table tr:hover{
+        background-color: #ddd;
+    }
+}
+
+
+/*-------------*/
+
+@media only screen and (max-width: 1200px) {
+    nav {
+        ul {
+            padding: 1% 0%;
+        }
+    }
+
+    .intro {
+        margin: 5% 15% 0% 15%;
+        text-align: center;
+
+        h2 {
+            margin: 0% 15%;
+            padding: 3% 0%;
+            text-align: center;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .intro {
+        margin: 5% 30% 0% 30%;
+
+        h2 {
+            margin: 0% 25% 0% 30%;
+            padding: 1% 0%;
+        }
+    }
+
+    #formulario {
+
+        margin: 0% 35%;
+
+    }
+}

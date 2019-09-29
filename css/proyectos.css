@@ -1,0 +1,10 @@
+.dropdown:hover .dropdown-menu {
+  display: block; }
+
+nav {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700; }
+
+.josefin {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700; }

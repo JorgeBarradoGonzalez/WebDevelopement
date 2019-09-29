@@ -1,0 +1,29 @@
+.proyectos,#proyectos {
+  padding-bottom: 0;
+  background-color: #67B6B4; }
+
+main {
+  background-color: white; }
+
+nav {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700; }
+
+#presentacion {
+  background-color: #FCD02E; }
+
+#formulario {
+  background-color: #BA7581; }
+  #formulario h5 {
+    color: white; }
+
+#btn {
+  background-color: #58e9f9; }
+
+.dropdown:hover .dropdown-menu {
+  display: block; }
+
+/*font-family: 'Josefin Sans', sans-serif;*/
+.josefin {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700; }
